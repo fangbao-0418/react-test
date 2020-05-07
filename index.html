@@ -1,0 +1,58 @@
+<!--
+ * @Author: fangbao
+ * @Date: 2020-05-06 22:16:03
+ * @LastEditors: fangbao
+ * @LastEditTime: 2020-05-06 23:33:57
+ * @FilePath: /eslint-plugin-xt-react/Users/fb/Documents/fangbao/react-test/index.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./node_modules/react/umd/react.development.js"></script>
+  <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    console.log(React);
+    console.log(ReactDOM.render, 'render');
+    // React.com
+    (function () {
+      const el = document.getElementById('root')
+
+      // const Hello2 = React.createElement(
+      //   'div',
+      //   // {
+      //   //   className: 'abc'
+      //   // }
+      // )
+      // class Welcome extends React.Component {
+      //   render () {
+      //     return <h1>Hello World!</h1>;
+      //   }
+      // }
+      const { useState } = React
+      function Hello () {
+        const [ count, setCount ] = useState(0)
+        return (
+          <div
+            onClick={() => {
+              setCount(count + 1)
+            }}
+          >
+            222 {count}
+          </div>
+        )
+      }
+      ReactDOM.render(
+        <Hello />,
+        el
+      )
+    })();
+  </script>
+</body>
+</html>
